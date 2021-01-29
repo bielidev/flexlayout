@@ -1,0 +1,181 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;  
+}
+
+#box1 {
+    background-color:#708090;
+    height: 40px;
+    padding: 15px;
+    margin-bottom: 5px;
+    display:flex;
+    justify-content: space-between;
+}
+#logo {
+    background-color: indianred;
+    flex-basis: 19%;
+}
+
+#webname {
+    background-color:indianred;
+    flex-basis: 59%
+}
+
+#social {
+    background-color: indianred;
+    flex-basis: 19%
+}
+
+#box2 {
+    background-color: orange;
+    height: 40px;
+    padding: 15px;
+    display: flex;
+}
+
+#menu {
+    background-color: #FFD700;
+    flex-basis: 100%;    
+}
+
+main {
+    background-color: black;
+    display: flex;  
+    padding: 15px;
+    justify-content: space-between;
+}
+
+main section {
+    background-color:grey;
+    display: flex;
+    flex-basis: 67.5%;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+main section .column-article {
+    background-color: #1874CD;
+    flex-basis: 49%;
+    margin: 0 0.5% 0.5% 0.5%;
+    height: 35px;
+}
+
+#inline-article {
+    background-color:#63B8FF; 
+    flex: 1;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    height: 35px;
+    align-self: flex-end;
+}
+
+main aside {
+    background-color: red; 
+    display:flex;
+    flex-basis: 27.5%;
+    flex-direction: column;
+    padding: 10px;
+}
+
+main aside .opinions {
+    background-color: yellow;
+    margin-bottom: 10px;
+    height: 35px;
+    
+}
+aside .opinions:last-child {
+    margin-bottom: 0;
+
+}
+footer {
+    background-color: black;
+    padding: 10px;
+    display: flex; 
+    height: 60px;
+}
+
+footer .contact {
+    background-color: orange;
+    flex-basis: 100%;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    main {
+       flex-direction: column;
+
+    }
+    main section {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width:767px) {
+    header {
+        padding: 30px;
+        margin-bottom: 20px;
+    }
+    #box1 {
+        padding: 40px;
+        margin-bottom: 20px;
+    }
+
+    #box2 {
+        padding: 40px;
+        
+    }
+
+    #logo {
+       
+        flex-basis: 16%;
+    }
+    
+    #webname {
+        
+        flex-basis: 56%
+    }
+    
+    #social {
+        
+        flex-basis: 16%
+    }
+
+    main {
+        flex-direction: column;
+        padding: 30px;
+        margin-bottom: 20px;
+     }
+     main section {
+         margin-bottom: 15px;
+         padding:20px;
+     }
+     main section article.column-article {
+        flex-basis: 40%;
+        margin: 0 5% 5% 5%;
+     }
+     main section article#inline-article {
+        flex-basis: 90%;
+        margin: 0 5%;
+
+     }
+     footer {
+         padding: 30px;
+         height: 30px;
+     }
+}
