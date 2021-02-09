@@ -6,23 +6,25 @@ html, body {
 body {
     background-color: white;
     display: flex;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
-    justify-content: space-between;
+
+    padding: 20px;
 }
 
 header {
     background-color: black;
     display: flex;
     flex-direction: column;
-    padding: 15px;  
+    padding: 15px; 
+    margin-bottom: 20px;
 }
 
 #box1 {
     background-color:#708090;
-    height: 40px;
+    height: 30px;
     padding: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     display:flex;
     justify-content: space-between;
 }
@@ -43,7 +45,7 @@ header {
 
 #box2 {
     background-color: orange;
-    height: 40px;
+    height: 30px;
     padding: 15px;
     display: flex;
 }
@@ -58,6 +60,7 @@ main {
     display: flex;  
     padding: 15px;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 main section {
@@ -70,17 +73,16 @@ main section {
 
 main section .column-article {
     background-color: #1874CD;
-    flex-basis: 49%;
-    margin: 0 0.5% 0.5% 0.5%;
-    height: 35px;
+    flex-basis: 48%;
+    margin: 1%;
+    height: 25px;
 }
 
 #inline-article {
     background-color:#63B8FF; 
     flex: 1;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    height: 35px;
+    margin: 1%;
+    height: 25px;
     align-self: flex-end;
 }
 
@@ -90,12 +92,13 @@ main aside {
     flex-basis: 27.5%;
     flex-direction: column;
     padding: 10px;
+    padding-top: 1.4%;
 }
 
 main aside .opinions {
     background-color: yellow;
     margin-bottom: 10px;
-    height: 35px;
+    height: 25px;
     
 }
 aside .opinions:last-child {
@@ -104,9 +107,10 @@ aside .opinions:last-child {
 }
 footer {
     background-color: black;
-    padding: 10px;
+    padding: 20px;
     display: flex; 
-    height: 60px;
+    height: 30px;
+    justify-self: flex-end;
 }
 
 footer .contact {
@@ -117,12 +121,31 @@ footer .contact {
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    #box1 {
+        padding: 25px;
+        height: 20px;
+    }
+    #webname {
+        flex-basis: 55%
+    }
     main {
        flex-direction: column;
 
     }
     main section {
         margin-bottom: 15px;
+    }
+
+    main section {
+        padding: 20px;
+    }
+    
+    main aside {
+        padding: 20px;
+    }
+    
+    #box2 {
+        padding: 25px;
     }
 }
 
@@ -132,29 +155,22 @@ footer .contact {
         margin-bottom: 20px;
     }
     #box1 {
-        padding: 40px;
+        padding: 20px;
         margin-bottom: 20px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #box1 div {
+        flex-basis: auto;
+        height: 30px;
+        display: block;
+        margin: 6%;
     }
 
     #box2 {
-        padding: 40px;
-        
-    }
-
-    #logo {
-       
-        flex-basis: 16%;
-    }
-    
-    #webname {
-        
-        flex-basis: 56%
-    }
-    
-    #social {
-        
-        flex-basis: 16%
-    }
+        padding: 30px;
+    }  
 
     main {
         flex-direction: column;
@@ -162,17 +178,22 @@ footer .contact {
         margin-bottom: 20px;
      }
      main section {
-         margin-bottom: 15px;
+         margin-bottom: 25px;
          padding:20px;
+         flex-direction: column;
      }
      main section article.column-article {
-        flex-basis: 40%;
-        margin: 0 5% 5% 5%;
+        flex-basis: auto;
+        margin: 6%;
      }
      main section article#inline-article {
-        flex-basis: 90%;
-        margin: 0 5%;
+        flex-basis: auto;
+        margin: 6%;
+        align-self: inherit;
+     }
 
+     main aside {
+         padding: 20px;
      }
      footer {
          padding: 30px;
